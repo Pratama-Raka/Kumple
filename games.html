@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Game - Kumple</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Kumple</a>
+        <ul>
+          <li><a href="games.html">Katalog Game</a></li>
+          <li><a href="events.html">Event</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Katalog Game</h1>
+
+      <form action="#" method="get">
+        <label for="search">Cari game</label>
+        <input
+          type="search"
+          id="search"
+          name="search"
+          placeholder="Nama game..."
+        />
+
+        <label for="players">Jumlah pemain</label>
+        <select id="players" name="players">
+          <option value="">Semua</option>
+          <option value="2">2 pemain</option>
+          <option value="3-4">3-4 pemain</option>
+          <option value="5+">5+ pemain</option>
+        </select>
+
+        <label for="category">Kategori</label>
+        <select id="category" name="category">
+          <option value="">Semua</option>
+          <option value="strategy">Strategy</option>
+          <option value="party">Party</option>
+          <option value="family">Family</option>
+        </select>
+
+        <button type="submit">Terapkan Filter</button>
+      </form>
+
+      <section id="daftar-game">
+        <article>
+          <figure>
+            <img
+              src="assets\catan-box.jpg"
+              alt="Kotak game Catan"
+            />
+          </figure>
+          <h2><a href="game-detail.html">Catan</a></h2>
+          <p>3-4 pemain | 60-90 menit | Strategy</p>
+        </article>
+
+        <article>
+          <figure>
+            <img
+              src="assets\ticket-to-ride-box.jpg"
+              alt="Kotak game Ticket to Ride"
+            />
+          </figure>
+          <h2><a href="game-detail.html">Ticket to Ride</a></h2>
+          <p>2-5 pemain | 45-60 menit | Strategy</p>
+        </article>
+
+        <article>
+          <figure>
+            <img
+              src="assets\codenames-box.jpg"
+              alt="Kotak game Codenames"
+              width="300"
+            />
+          </figure>
+          <h2><a href="game-detail.html">Codenames</a></h2>
+          <p>4-8 pemain | 15-30 menit | Party</p>
+        </article>
+
+        <article>
+          <figure>
+            <img
+              src="assets\sushi-go-box.png"
+              alt="Kotak game Sushi Go"
+            />
+          </figure>
+          <h2><a href="game-detail.html">Sushi Go!</a></h2>
+          <p>2-5 pemain | 15 menit | Family</p>
+        </article>
+
+        <article>
+          <figure>
+            <img
+              src="assets\monopoly-deal-box.jpg"
+              alt="Kotak game Monopoly Deal"
+              width="300"
+            />
+          </figure>
+          <h2><a href="game-detail.html">Monopoly Deal</a></h2>
+          <p>2-5 pemain | 15-30 menit | Family</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Kumple. Dibuat untuk komunitas boardgame Bandung.</p>
+    </footer>
+  </body>
+</html>
