@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event - Kumple</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Kumple</a>
+        <ul>
+          <li><a href="games.html">Katalog Game</a></li>
+          <li><a href="events.html">Event</a></li>
+          <li><a href="about.html">Tentang</a></li>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Event Mendatang</h1>
+      <a href="create-event.html">Buat Event Baru</a>
+
+      <form action="#" method="get">
+        <label for="venue">Venue</label>
+        <select id="venue" name="venue">
+          <option value="">Semua venue</option>
+          <option value="kopi-session">Kopi Session, Dago</option>
+          <option value="board-brew">Board &amp; Brew, Buah Batu</option>
+        </select>
+
+        <label for="tanggal">Tanggal</label>
+        <input type="date" id="tanggal" name="tanggal" />
+
+        <button type="submit">Terapkan Filter</button>
+      </form>
+
+      <section id="daftar-event">
+        <article>
+          <h2>
+            <a href="event-detail.html"
+              >Malam Strategi: Catan &amp; Ticket to Ride</a
+            >
+          </h2>
+          <p>Kopi Session, Dago</p>
+          <p>
+            <time datetime="2026-10-04T19:00"
+              >Sabtu, 4 Oktober 2026, 19.00</time
+            >
+          </p>
+          <p>6 dari 8 slot terisi</p>
+        </article>
+
+        <article>
+          <h2>
+            <a href="event-detail.html">Party Game Santai untuk Pemula</a>
+          </h2>
+          <p>Board - Brew, Buah Batu</p>
+          <p>
+            <time datetime="2026-10-11T18:30"
+              >Sabtu, 11 Oktober 2026, 18.30</time
+            >
+          </p>
+          <p>4 dari 10 slot terisi</p>
+        </article>
+
+        <article>
+          <h2><a href="event-detail.html">Marathon Codenames</a></h2>
+          <p>Kopi Session, Dago</p>
+          <p>
+            <time datetime="2026-10-18T16:00"
+              >Sabtu, 18 Oktober 2026, 16.00</time
+            >
+          </p>
+          <p>Penuh &dash; 12 dari 12 slot</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Kumple. Dibuat untuk komunitas boardgame Bandung.</p>
+    </footer>
+  </body>
+</html>
