@@ -574,6 +574,64 @@ footer {
   font-weight: 600;
 }
 
+/* Login & Register Pages */
+button.btn {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+ 
+.form-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: var(--tile-face);
+  color: var(--black);
+  box-shadow: 10px -10px 0 var(--tile-edge);
+}
+ 
+.form-card .btn {
+  align-self: flex-start;
+  margin: 0;
+}
+ 
+.auth {
+  display: grid;
+  grid-template-columns: minmax(0, 480px) 1fr;
+  gap: 32px 64px;
+  align-items: center;
+}
+ 
+.auth-art {
+  height: 340px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(4deg);
+  filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.22));
+}
+ 
+.art-coins {
+  background-image: url("../assets/carrom-board.png");
+}
+ 
+.art-pieces {
+  background-image: url("../assets/chess-pieces.svg");
+}
+ 
+.auth-switch {
+  grid-column: 1 / -1;
+}
+ 
+.auth-switch a {
+  color: var(--yellow);
+  font-weight: 600;
+}
+
 /* Media Queries */
 @media (max-width: 1250px) {
   .hero-title {
@@ -655,4 +713,5 @@ footer {
     gap: 24px 16px;
     border-radius: 16px 16px 0 0;
   }
+  
 }
