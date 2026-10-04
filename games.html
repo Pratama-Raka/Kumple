@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katalog Game | Kumple</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html" class="logo">Kumple</a>
         <ul class="nav-links">
-          <li><a href="games.html">Katalog Game</a></li>
+          <li><a href="games.html" aria-current="page">Katalog Game</a></li>
           <li><a href="events.html">Event</a></li>
           <li><a href="about.html">Tentang</a></li>
           <li><a href="login.html">Log In</a></li>
@@ -21,92 +21,138 @@
     </header>
 
     <main>
-      <h1>Katalog Game</h1>
+      <h1 class="page-title">Katalog Game</h1>
 
-      <form action="#" method="get">
-        <label for="search">Cari game</label>
-        <input
-          type="search"
-          id="search"
-          name="search"
-          placeholder="Nama game..."
-        />
+      <form action="#" method="get" class="filter-form">
+        <div class="field field-search">
+          <label for="search" class="field-label">Cari game</label>
+          <input
+            type="search"
+            id="search"
+            name="search"
+            placeholder="Nama game..."
+            class="input"
+          />
+        </div>
 
-        <label for="players">Jumlah pemain</label>
-        <select id="players" name="players">
-          <option value="">Semua</option>
-          <option value="2">2 pemain</option>
-          <option value="3-4">3-4 pemain</option>
-          <option value="5+">5+ pemain</option>
-        </select>
+        <div class="field">
+          <label for="players" class="field-label">Jumlah pemain</label>
+          <select id="players" name="players" class="input">
+            <option value="">Semua</option>
+            <option value="2">2 pemain</option>
+            <option value="3-4">3-4 pemain</option>
+            <option value="5+">5+ pemain</option>
+          </select>
+        </div>
 
-        <label for="category">Kategori</label>
-        <select id="category" name="category">
-          <option value="">Semua</option>
-          <option value="strategy">Strategy</option>
-          <option value="party">Party</option>
-          <option value="family">Family</option>
-        </select>
+        <div class="field">
+          <label for="category" class="field-label">Kategori</label>
+          <select id="category" name="category" class="input">
+            <option value="">Semua</option>
+            <option value="strategy">Strategy</option>
+            <option value="party">Party</option>
+            <option value="family">Family</option>
+          </select>
+        </div>
 
-        <button type="submit">Terapkan Filter</button>
+        <button type="submit" class="btn btn-red">Terapkan Filter</button>
       </form>
 
-      <section id="daftar-game">
-        <article>
-          <figure>
-            <img
-              src="assets\catan-box.jpg"
-              alt="Kotak game Catan"
-            />
+      <section class="game-list">
+        <article class="game-card strategy">
+          <figure class="game-image">
+            <span
+              class="game-tile tile-4"
+              title="Maksimal 4 pemain"
+              aria-hidden="true"
+            ></span>
+            <img src="assets/catan-box.jpg" alt="Kotak game Catan" />
           </figure>
-          <h2><a href="game-detail.html">Catan</a></h2>
-          <p>3-4 pemain | 60-90 menit | Strategy</p>
+          <h2 class="game-title">
+            <a href="game-detail.html" class="game-link">Catan</a>
+          </h2>
+          <p class="game-info">
+            3-4 pemain | 60-90 menit |
+            <span class="game-tag">Strategy</span>
+          </p>
         </article>
 
-        <article>
-          <figure>
+        <article class="game-card strategy">
+          <figure class="game-image">
+            <span
+              class="game-tile tile-5"
+              title="Maksimal 5 pemain"
+              aria-hidden="true"
+            ></span>
             <img
-              src="assets\ticket-to-ride-box.jpg"
+              src="assets/ticket-to-ride-box.jpg"
               alt="Kotak game Ticket to Ride"
             />
           </figure>
-          <h2><a href="game-detail.html">Ticket to Ride</a></h2>
-          <p>2-5 pemain | 45-60 menit | Strategy</p>
+          <h2 class="game-title">
+            <a href="game-detail.html" class="game-link">Ticket to Ride</a>
+          </h2>
+          <p class="game-info">
+            2-5 pemain | 45-60 menit |
+            <span class="game-tag">Strategy</span>
+          </p>
         </article>
 
-        <article>
-          <figure>
-            <img
-              src="assets\codenames-box.jpg"
-              alt="Kotak game Codenames"
-              width="300"
-            />
+        <article class="game-card party">
+          <figure class="game-image">
+            <span
+              class="game-tile tile-8"
+              title="Maksimal 8 pemain"
+              aria-hidden="true"
+            ></span>
+            <img src="assets/codenames-box.jpg" alt="Kotak game Codenames" />
           </figure>
-          <h2><a href="game-detail.html">Codenames</a></h2>
-          <p>4-8 pemain | 15-30 menit | Party</p>
+          <h2 class="game-title">
+            <a href="game-detail.html" class="game-link">Codenames</a>
+          </h2>
+          <p class="game-info">
+            4-8 pemain | 15-30 menit |
+            <span class="game-tag">Party</span>
+          </p>
         </article>
 
-        <article>
-          <figure>
-            <img
-              src="assets\sushi-go-box.png"
-              alt="Kotak game Sushi Go"
-            />
+        <article class="game-card family">
+          <figure class="game-image">
+            <span
+              class="game-tile tile-5"
+              title="Maksimal 5 pemain"
+              aria-hidden="true"
+            ></span>
+            <img src="assets/sushi-go-box.png" alt="Kotak game Sushi Go" />
           </figure>
-          <h2><a href="game-detail.html">Sushi Go!</a></h2>
-          <p>2-5 pemain | 15 menit | Family</p>
+          <h2 class="game-title">
+            <a href="game-detail.html" class="game-link">Sushi Go!</a>
+          </h2>
+          <p class="game-info">
+            2-5 pemain | 15 menit |
+            <span class="game-tag">Family</span>
+          </p>
         </article>
 
-        <article>
-          <figure>
+        <article class="game-card family">
+          <figure class="game-image">
+            <span
+              class="game-tile tile-5"
+              title="Maksimal 5 pemain"
+              aria-hidden="true"
+            ></span>
             <img
-              src="assets\monopoly-deal-box.jpg"
+              src="assets/monopoly-deal-box.jpg"
               alt="Kotak game Monopoly Deal"
-              width="300"
             />
           </figure>
-          <h2><a href="game-detail.html">Monopoly Deal</a></h2>
-          <p>2-5 pemain | 15-30 menit | Family</p>
+          <h2 class="game-title">
+            <a href="game-detail.html" class="game-link">Monopoly Deal</a>
+          </h2>
+          <p class="game-info">
+            2-5 pemain | 15-30 menit |
+            <span class="game-tag">Family</span>
+          </p>
         </article>
       </section>
     </main>
