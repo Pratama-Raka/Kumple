@@ -710,6 +710,58 @@ textarea.input {
   color: var(--red);
   font-weight: 600;
 }
+
+/* Events Page */
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+ 
+.page-head .btn {
+  margin-bottom: 4px;
+}
+ 
+.page-head + .filter-form {
+  margin-top: 32px;
+}
+ 
+.slot-bar {
+  display: block;
+  height: 12px;
+  margin-top: 12px;
+  border-radius: 99px;
+  background-image: linear-gradient(
+    to right,
+    var(--bar, var(--red)) var(--filled),
+    rgba(15, 35, 27, 0.15) var(--filled)
+  );
+}
+ 
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px 28px;
+  padding-bottom: 64px;
+}
+ 
+.event-full {
+  --accent: var(--charcoal);
+  --bar: var(--charcoal);
+}
+ 
+.event-venue {
+  font-weight: 600;
+}
+ 
+.event-slots {
+  font-size: 15px;
+}
+ 
 /* Media Queries */
 @media (max-width: 1250px) {
   .hero-title {
