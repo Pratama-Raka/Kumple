@@ -498,6 +498,82 @@ footer {
   font-weight: 600;
 }
 
+/* About Page */
+.page-title-short {
+  min-height: 0;
+}
+ 
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 48px;
+  align-items: center;
+  padding-top: 0;
+}
+ 
+.about-lead {
+  max-width: 620px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+ 
+.about-art {
+  width: 360px;
+  height: 360px;
+  background-image:
+    url("../assets/chess-pieces.svg"),
+    radial-gradient(circle, var(--tan) 70%, transparent 71%);
+  background-size:
+    62%,
+    100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(4deg);
+  filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.22));
+}
+ 
+.about-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+ 
+.venue-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 28px;
+}
+ 
+.venue-tile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-self: start;
+  padding: 20px 28px;
+  border-radius: 18px;
+  background-color: var(--tile-face);
+  color: var(--black);
+  font-family: "Young Serif", serif;
+  font-size: 16px;
+  box-shadow: 8px -8px 0 var(--tile-edge);
+}
+ 
+.contact-card {
+  padding: 28px;
+  border-radius: 14px;
+  background-color: var(--dark-brown);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+  font-style: normal;
+  line-height: 2;
+}
+ 
+.contact-card a {
+  color: var(--yellow);
+  font-weight: 600;
+}
+
 /* Media Queries */
 @media (max-width: 1250px) {
   .hero-title {
