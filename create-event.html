@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buat Event Baru | Kumple</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -12,7 +12,7 @@
         <a href="index.html" class="logo">Kumple</a>
         <ul class="nav-links">
           <li><a href="games.html">Katalog Game</a></li>
-          <li><a href="events.html">Event</a></li>
+          <li><a href="events.html" aria-current="page">Event</a></li>
           <li><a href="about.html">Tentang</a></li>
           <li><a href="login.html">Log In</a></li>
           <li><a href="register.html">Register</a></li>
@@ -21,56 +21,64 @@
     </header>
 
     <main>
-      <h1>Buat Event Baru</h1>
+      <h1 class="page-title page-title-short">Buat Event Baru</h1>
 
-      <form action="#" method="post">
-        <h3>Detail Event</h3>
-        <table width="500" height="30">
-          <tr>
-            <td colspan="2">
-              <label for="nama-event">Nama event</label>
+      <div class="form-wrap">
+        <form action="#" method="post" class="form-card event-form">
+          <h3 class="form-heading">Detail Event</h3>
+
+          <div class="form-grid">
+            <div class="field field-double">
+              <label for="nama-event" class="field-label">Nama event</label>
               <input
                 type="text"
                 id="nama-event"
                 name="nama-event"
                 placeholder="Masukkan Nama Event"
+                class="input"
                 required
               />
-            </td>
-            <td colspan="2">
-              <label for="venue">Venue</label>
-              <select id="venue" name="venue" required>
+            </div>
+            <div class="field">
+              <label for="venue" class="field-label">Venue</label>
+              <select id="venue" name="venue" class="input" required>
                 <option value="">Pilih venue</option>
                 <option value="kopi-session">Kopi Session, Dago</option>
                 <option value="board-brew">Board &amp; Brew, Buah Batu</option>
               </select>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="deskripsi">Deskripsi</label>
-            </td>
-            <td colspan="3">
+            </div>
+            <div class="field field-wide">
+              <label for="deskripsi" class="field-label">Deskripsi</label>
               <textarea
                 id="deskripsi"
                 name="deskripsi"
                 rows="4"
-                cols="30"
                 placeholder="Deskripsikan Event"
+                class="input"
               ></textarea>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="tanggal">Tanggal</label>
-              <input type="date" id="tanggal" name="tanggal" required />
-            </td>
-            <td>
-              <label for="waktu">Waktu mulai</label>
-              <input type="time" id="waktu" name="waktu" required />
-            </td>
-            <td>
-              <label for="slot">Jumlah slot peserta</label>
+            </div>
+            <div class="field">
+              <label for="tanggal" class="field-label">Tanggal</label>
+              <input
+                type="date"
+                id="tanggal"
+                name="tanggal"
+                class="input"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="waktu" class="field-label">Waktu mulai</label>
+              <input
+                type="time"
+                id="waktu"
+                name="waktu"
+                class="input"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="slot" class="field-label">Jumlah slot peserta</label>
               <input
                 type="number"
                 id="slot"
@@ -78,31 +86,37 @@
                 min="2"
                 max="30"
                 value="8"
+                class="input"
                 required
               />
-            </td>
-          </tr>
-        </table>
+            </div>
+          </div>
 
-        <fieldset style="width: 30%;">
-          <legend>Game yang akan dimainkan</legend>
+          <fieldset class="game-picks">
+            <legend>Game yang akan dimainkan</legend>
 
-          <label for="game-1"
-            ><input type="checkbox" id="game-1" name="game" value="catan" />
-            Catan</label
-          >
-          <label for="game-2"
-            ><input type="checkbox" id="game-2" name="game" value="ttr" />
-            Ticket to Ride</label
-          >
-          <label for="game-3"
-            ><input type="checkbox" id="game-3" name="game" value="codenames" />
-            Codenames</label
-          >
-        </fieldset>
-        <br>
-        <button type="submit">Buat Event</button>
-      </form>
+            <label for="game-1" class="game-pick">
+              <input type="checkbox" id="game-1" name="game" value="catan" />
+              <span>Catan</span>
+            </label>
+            <label for="game-2" class="game-pick">
+              <input type="checkbox" id="game-2" name="game" value="ttr" />
+              <span>Ticket to Ride</span>
+            </label>
+            <label for="game-3" class="game-pick">
+              <input
+                type="checkbox"
+                id="game-3"
+                name="game"
+                value="codenames"
+              />
+              <span>Codenames</span>
+            </label>
+          </fieldset>
+
+          <button type="submit" class="btn btn-red">Buat Event</button>
+        </form>
+      </div>
     </main>
 
     <footer>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event | Kumple</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -12,7 +12,7 @@
         <a href="index.html" class="logo">Kumple</a>
         <ul class="nav-links">
           <li><a href="games.html">Katalog Game</a></li>
-          <li><a href="events.html">Event</a></li>
+          <li><a href="events.html" aria-current="page">Event</a></li>
           <li><a href="about.html">Tentang</a></li>
           <li><a href="login.html">Log In</a></li>
           <li><a href="register.html">Register</a></li>
@@ -21,61 +21,88 @@
     </header>
 
     <main>
-      <h1>Event Mendatang</h1>
-      <a href="create-event.html">Buat Event Baru</a>
+      <div class="page-head">
+        <h1 class="page-title page-title-short">Event Mendatang</h1>
+        <a href="create-event.html" class="btn btn-yellow">Buat Event Baru</a>
+      </div>
 
-      <form action="#" method="get">
-        <label for="venue">Venue</label>
-        <select id="venue" name="venue">
-          <option value="">Semua venue</option>
-          <option value="kopi-session">Kopi Session, Dago</option>
-          <option value="board-brew">Board &amp; Brew, Buah Batu</option>
-        </select>
+      <form action="#" method="get" class="filter-form">
+        <div class="field">
+          <label for="venue" class="field-label">Venue</label>
+          <select id="venue" name="venue" class="input">
+            <option value="">Semua venue</option>
+            <option value="kopi-session">Kopi Session, Dago</option>
+            <option value="board-brew">Board &amp; Brew, Buah Batu</option>
+          </select>
+        </div>
 
-        <label for="tanggal">Tanggal</label>
-        <input type="date" id="tanggal" name="tanggal" />
+        <div class="field">
+          <label for="tanggal" class="field-label">Tanggal</label>
+          <input type="date" id="tanggal" name="tanggal" class="input" />
+        </div>
 
-        <button type="submit">Terapkan Filter</button>
+        <button type="submit" class="btn btn-red">Terapkan Filter</button>
       </form>
 
-      <section id="daftar-event">
-        <article>
-          <h2>
-            <a href="event-detail.html"
+      <p class="tile-note">Jumlah titik di ubin = slot tersisa</p>
+
+      <section class="event-list">
+        <article class="event-card">
+          <span
+            class="game-tile tile-2"
+            title="2 slot tersisa"
+            aria-hidden="true"
+          ></span>
+          <h2 class="event-title">
+            <a href="event-detail.html" class="event-link"
               >Malam Strategi: Catan &amp; Ticket to Ride</a
             >
           </h2>
-          <p>Kopi Session, Dago</p>
-          <p>
+          <p class="event-venue">Kopi Session, Dago</p>
+          <p class="event-time">
             <time datetime="2026-10-04T19:00"
               >Sabtu, 4 Oktober 2026, 19.00</time
             >
           </p>
-          <p>6 dari 8 slot terisi</p>
+          <p class="event-slots">6 dari 8 slot terisi</p>
+          <span class="slot-bar" style="--filled: 75%"></span>
         </article>
 
-        <article>
-          <h2>
-            <a href="event-detail.html">Party Game Santai untuk Pemula</a>
+        <article class="event-card">
+          <span
+            class="game-tile tile-6"
+            title="6 slot tersisa"
+            aria-hidden="true"
+          ></span>
+          <h2 class="event-title">
+            <a href="event-detail.html" class="event-link"
+              >Party Game Santai untuk Pemula</a
+            >
           </h2>
-          <p>Board - Brew, Buah Batu</p>
-          <p>
+          <p class="event-venue">Board - Brew, Buah Batu</p>
+          <p class="event-time">
             <time datetime="2026-10-11T18:30"
               >Sabtu, 11 Oktober 2026, 18.30</time
             >
           </p>
-          <p>4 dari 10 slot terisi</p>
+          <p class="event-slots">4 dari 10 slot terisi</p>
+          <span class="slot-bar" style="--filled: 40%"></span>
         </article>
 
-        <article>
-          <h2><a href="event-detail.html">Marathon Codenames</a></h2>
-          <p>Kopi Session, Dago</p>
-          <p>
+        <article class="event-card event-full">
+          <h2 class="event-title">
+            <a href="event-detail.html" class="event-link"
+              >Marathon Codenames</a
+            >
+          </h2>
+          <p class="event-venue">Kopi Session, Dago</p>
+          <p class="event-time">
             <time datetime="2026-10-18T16:00"
               >Sabtu, 18 Oktober 2026, 16.00</time
             >
           </p>
-          <p>Penuh &dash; 12 dari 12 slot</p>
+          <p class="event-slots">Penuh &dash; 12 dari 12 slot</p>
+          <span class="slot-bar" style="--filled: 100%"></span>
         </article>
       </section>
     </main>

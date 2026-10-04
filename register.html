@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register Kumple</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -19,48 +19,45 @@
     </header>
 
     <main>
-      <h1>Buat Akun Kumple</h1>
+      <h1 class="page-title page-title-short">Buat Akun Kumple</h1>
 
-      <table>
-        <form action="#" method="post">
-          <tr>
-            <td>
-              <label for="nama">Nama lengkap</label>
-            </td>
-            <td>
-              <input type="text" id="nama" name="nama" required />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="email">Email</label>
-            </td>
-            <td>
-              <input type="email" id="email" name="email" required />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="password">Kata sandi</label>
-            </td>
-            <td>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                required
-                minlength="8"
-              />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <button type="Regist">Regist</button>
-            </td>
-          </tr>
+      <section class="auth">
+        <form action="#" method="post" class="form-card">
+          <span class="game-tile tile-9" aria-hidden="true"></span>
+          <div class="field">
+            <label for="nama" class="field-label">Nama lengkap</label>
+            <input type="text" id="nama" name="nama" class="input" required />
+          </div>
+          <div class="field">
+            <label for="email" class="field-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="input"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="password" class="field-label">Kata sandi</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="input"
+              required
+              minlength="8"
+            />
+          </div>
+          <button type="submit" class="btn btn-red">Regist</button>
         </form>
-      </table>
-      <p>Sudah punya akun? <a href="login.html">Log In di sini</a></p>
+
+        <div class="auth-art art-pieces" aria-hidden="true"></div>
+
+        <p class="auth-switch">
+          Sudah punya akun? <a href="login.html">Log In di sini</a>
+        </p>
+      </section>
     </main>
 
     <footer>

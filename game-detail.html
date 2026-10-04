@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catan | Detail Game | Kumple</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <nav>
         <a href="index.html" class="logo">Kumple</a>
         <ul class="nav-links">
-          <li><a href="games.html">Katalog Game</a></li>
+          <li><a href="games.html" aria-current="page">Katalog Game</a></li>
           <li><a href="events.html">Event</a></li>
           <li><a href="about.html">Tentang</a></li>
           <li><a href="login.html">Log In</a></li>
@@ -21,55 +21,78 @@
     </header>
 
     <main>
-      <article>
-        <figure>
-          <img
-            src="assets\catan-box.jpg"
-            alt="Kotak game Catan"
-          />
-          <figcaption>Catan - edisi dasar</figcaption>
-        </figure>
+      <div class="detail-wrap">
+        <article class="detail-card game-detail">
+          <figure class="game-image">
+            <span
+              class="game-tile tile-4"
+              title="Maksimal 4 pemain"
+              aria-hidden="true"
+            ></span>
+            <img src="assets/catan-box.jpg" alt="Kotak game Catan" />
+            <figcaption class="cover-caption">Catan - edisi dasar</figcaption>
+          </figure>
 
-        <h1>Catan</h1>
-        <p>
-          Bangun pemukiman, kumpulkan sumber daya, dan jadi penguasa pulau
-          Catan. Salah satu game strategi paling populer untuk pemula maupun
-          pemain berpengalaman.
-        </p>
+          <div class="detail-info">
+            <h1 class="detail-title">Catan</h1>
+            <p class="detail-text">
+              Bangun pemukiman, kumpulkan sumber daya, dan jadi penguasa pulau
+              Catan. Salah satu game strategi paling populer untuk pemula maupun
+              pemain berpengalaman.
+            </p>
 
-        <dl>
-          <dt>Jumlah pemain</dt>
-          <dd>3-4 pemain</dd>
+            <dl class="facts">
+              <div class="fact">
+                <dt>Jumlah pemain</dt>
+                <dd>3-4 pemain</dd>
+              </div>
+              <div class="fact">
+                <dt>Durasi main</dt>
+                <dd>60-90 menit</dd>
+              </div>
+              <div class="fact">
+                <dt>Kategori</dt>
+                <dd>Strategy</dd>
+              </div>
+              <div class="fact">
+                <dt>Tingkat kesulitan</dt>
+                <dd>Menengah</dd>
+              </div>
+              <div class="fact">
+                <dt>Rating komunitas</dt>
+                <dd>4.3 / 5</dd>
+              </div>
+            </dl>
 
-          <dt>Durasi main</dt>
-          <dd>60-90 menit</dd>
-
-          <dt>Kategori</dt>
-          <dd>Strategy</dd>
-
-          <dt>Tingkat kesulitan</dt>
-          <dd>Menengah</dd>
-
-          <dt>Rating komunitas</dt>
-          <dd>4.3 / 5</dd>
-        </dl>
-
-        <button type="button">Tambah ke Koleksi</button>
-        <a href="events.html">Cari event yang mainkan game ini</a>
-      </article>
-
-      <section id="ulasan">
-        <h2>Ulasan pemain</h2>
-        <article>
-          <p>
-            "Game gateway terbaik buat yang baru mulai main boardgame strategi."
-          </p>
-          <p>- Rangga, Bandung</p>
+            <div class="detail-actions">
+              <button type="button" class="btn btn-red">
+                Tambah ke Koleksi
+              </button>
+              <a href="events.html" class="btn btn-outline"
+                >Cari event yang mainkan game ini</a
+              >
+            </div>
+          </div>
         </article>
-        <article>
-          <p>"Selalu jadi pilihan pertama kalau lagi kumpul rame-rame."</p>
-          <p>- Sinta, Bandung</p>
-        </article>
+      </div>
+
+      <section class="reviews">
+        <h2 class="section-title">Ulasan pemain</h2>
+        <div class="review-list">
+          <article class="review-card">
+            <p class="review-text">
+              "Game gateway terbaik buat yang baru mulai main boardgame
+              strategi."
+            </p>
+            <p class="review-author">- Rangga, Bandung</p>
+          </article>
+          <article class="review-card">
+            <p class="review-text">
+              "Selalu jadi pilihan pertama kalau lagi kumpul rame-rame."
+            </p>
+            <p class="review-author">- Sinta, Bandung</p>
+          </article>
+        </div>
       </section>
     </main>
 

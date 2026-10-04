@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Malam Strategi: Catan &amp; Ticket to Ride | Kumple</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
@@ -12,7 +12,7 @@
         <a href="index.html" class="logo">Kumple</a>
         <ul class="nav-links">
           <li><a href="games.html">Katalog Game</a></li>
-          <li><a href="events.html">Event</a></li>
+          <li><a href="events.html" aria-current="page">Event</a></li>
           <li><a href="about.html">Tentang</a></li>
           <li><a href="login.html">Log In</a></li>
           <li><a href="register.html">Register</a></li>
@@ -21,50 +21,69 @@
     </header>
 
     <main>
-      <article>
-        <h1>Malam Strategi: Catan &amp; Ticket to Ride</h1>
-        <p>
-          Yuk kumpul santai main dua game strategi klasik. Cocok buat yang udah
-          pernah main maupun yang baru mau coba, bakal ada yang bantu jelasin
-          aturan main di awal.
-        </p>
+      <div class="event-layout">
+        <article class="detail-card">
+          <span
+            class="game-tile tile-2"
+            title="2 slot tersisa"
+            aria-hidden="true"
+          ></span>
+          <h1 class="detail-title">
+            Malam Strategi: Catan &amp; Ticket to Ride
+          </h1>
+          <p class="detail-text">
+            Yuk kumpul santai main dua game strategi klasik. Cocok buat yang
+            udah pernah main maupun yang baru mau coba, bakal ada yang bantu
+            jelasin aturan main di awal.
+          </p>
 
-        <dl>
-          <dt>Lokasi</dt>
-          <dd>Kopi Session, Jl. Ir. H. Djuanda No.123, Dago, Bandung</dd>
+          <dl class="facts">
+            <div class="fact">
+              <dt>Lokasi</dt>
+              <dd>Kopi Session, Jl. Ir. H. Djuanda No.123, Dago, Bandung</dd>
+            </div>
+            <div class="fact">
+              <dt>Waktu</dt>
+              <dd>
+                <time datetime="2026-10-04T19:00"
+                  >Sabtu, 4 Oktober 2026, 19.00</time
+                >
+              </dd>
+            </div>
+            <div class="fact">
+              <dt>Slot tersedia</dt>
+              <dd>
+                2 dari 8 slot tersisa
+                <span class="slot-bar" style="--filled: 75%"></span>
+              </dd>
+            </div>
+            <div class="fact">
+              <dt>Host</dt>
+              <dd>Rangga P.</dd>
+            </div>
+          </dl>
 
-          <dt>Waktu</dt>
-          <dd>
-            <time datetime="2026-10-04T19:00"
-              >Sabtu, 4 Oktober 2026, 19.00</time
-            >
-          </dd>
+          <h2 class="detail-subtitle">Game yang akan dimainkan</h2>
+          <ul class="game-chips">
+            <li><a href="game-detail.html" class="game-chip">Catan</a></li>
+            <li>
+              <a href="game-detail.html" class="game-chip">Ticket to Ride</a>
+            </li>
+          </ul>
 
-          <dt>Slot tersedia</dt>
-          <dd>2 dari 8 slot tersisa</dd>
+          <button type="button" class="btn btn-red">Gabung Event Ini</button>
+        </article>
 
-          <dt>Host</dt>
-          <dd>Rangga P.</dd>
-        </dl>
-
-        <h2>Game yang akan dimainkan</h2>
-        <ul>
-          <li><a href="game-detail.html">Catan</a></li>
-          <li><a href="game-detail.html">Ticket to Ride</a></li>
-        </ul>
-
-        <button type="button">Gabung Event Ini</button>
-      </article>
-
-      <section id="peserta">
-        <h2>Peserta yang sudah gabung</h2>
-        <ul>
-          <li>Rangga P. (Host)</li>
-          <li>Sinta W.</li>
-          <li>Fajar A.</li>
-          <li>Dewi K.</li>
-        </ul>
-      </section>
+        <section class="players">
+          <h2 class="section-title">Peserta yang sudah gabung</h2>
+          <ul class="player-list">
+            <li class="player">Rangga P. (Host)</li>
+            <li class="player">Sinta W.</li>
+            <li class="player">Fajar A.</li>
+            <li class="player">Dewi K.</li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <footer>
