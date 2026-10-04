@@ -502,7 +502,7 @@ footer {
 .page-title-short {
   min-height: 0;
 }
- 
+
 .about-intro {
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -510,13 +510,13 @@ footer {
   align-items: center;
   padding-top: 0;
 }
- 
+
 .about-lead {
   max-width: 620px;
   margin-bottom: 20px;
   font-size: 20px;
 }
- 
+
 .about-art {
   width: 360px;
   height: 360px;
@@ -531,21 +531,21 @@ footer {
   transform: rotate(4deg);
   filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.22));
 }
- 
+
 .about-boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: start;
 }
- 
+
 .venue-list {
   list-style: none;
   padding: 0;
   display: grid;
   gap: 28px;
 }
- 
+
 .venue-tile {
   display: flex;
   align-items: center;
@@ -559,7 +559,7 @@ footer {
   font-size: 16px;
   box-shadow: 8px -8px 0 var(--tile-edge);
 }
- 
+
 .contact-card {
   padding: 28px;
   border-radius: 14px;
@@ -568,7 +568,7 @@ footer {
   font-style: normal;
   line-height: 2;
 }
- 
+
 .contact-card a {
   color: var(--yellow);
   font-weight: 600;
@@ -581,7 +581,7 @@ button.btn {
   font-family: inherit;
   font-size: inherit;
 }
- 
+
 .form-card {
   position: relative;
   display: flex;
@@ -593,19 +593,19 @@ button.btn {
   color: var(--black);
   box-shadow: 10px -10px 0 var(--tile-edge);
 }
- 
+
 .form-card .btn {
   align-self: flex-start;
   margin: 0;
 }
- 
+
 .auth {
   display: grid;
   grid-template-columns: minmax(0, 480px) 1fr;
   gap: 32px 64px;
   align-items: center;
 }
- 
+
 .auth-art {
   height: 340px;
   background-size: contain;
@@ -614,24 +614,102 @@ button.btn {
   transform: rotate(4deg);
   filter: drop-shadow(0 12px 0 rgba(0, 0, 0, 0.22));
 }
- 
+
 .art-coins {
   background-image: url("../assets/carrom-board.png");
 }
- 
+
 .art-pieces {
   background-image: url("../assets/chess-pieces.svg");
 }
- 
+
 .auth-switch {
   grid-column: 1 / -1;
 }
- 
+
 .auth-switch a {
   color: var(--yellow);
   font-weight: 600;
 }
+/* Create Event Page */
+.event-form {
+  max-width: 920px;
+}
 
+.event-form::after {
+  content: "";
+  position: absolute;
+  top: -52px;
+  right: -36px;
+  width: 120px;
+  height: 120px;
+  background-image: url("../assets/carrom-coins.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(18deg);
+  filter: drop-shadow(0 6px 0 rgba(0, 0, 0, 0.3));
+}
+
+.form-heading {
+  font-family: "Young Serif", serif;
+  font-size: 26px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.field-double {
+  grid-column: span 2;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+textarea.input {
+  text-align: left;
+  resize: vertical;
+}
+
+.game-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 20px 20px;
+  border: 2px dashed var(--dark-brown);
+  border-radius: 14px;
+}
+
+.game-picks legend {
+  padding: 0 8px;
+  font-weight: 600;
+}
+
+.game-pick {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border: 2px solid var(--dark-brown);
+  border-radius: 10px;
+  background-color: var(--white);
+  box-shadow: 3px 3px 0 var(--dark-brown);
+  cursor: pointer;
+}
+
+.game-pick input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--red);
+}
+
+.game-pick input:checked + span {
+  color: var(--red);
+  font-weight: 600;
+}
 /* Media Queries */
 @media (max-width: 1250px) {
   .hero-title {
@@ -713,5 +791,4 @@ button.btn {
     gap: 24px 16px;
     border-radius: 16px 16px 0 0;
   }
-  
 }
