@@ -274,7 +274,7 @@ footer {
 }
 
 .game-card {
-  min-width: 0;
+  max-width: 250px;
 }
 
 .event-card:nth-of-type(odd) {
@@ -1006,19 +1006,32 @@ textarea.input {
     max-width: none;
   }
   .hero::after {
-    position: static;
+    position: absolute;
     display: block;
     width: 300px;
     height: 300px;
-    margin: 24px 0 0 auto;
+    top: auto;
+    right: -72px;
+    bottom: -32px;
+    margin: 0;
     transform: rotate(-10deg);
+    opacity: 0.22;
+    z-index: 0;
+  }
+  .hero > * {
+    position: relative;
+    z-index: 1;
   }
   .why,
   .events {
     padding: 56px 20px;
   }
   .events {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .event-card,
+  .game-card {
+    padding: 20px;
   }
   .events::before {
     display: none;
@@ -1042,5 +1055,223 @@ textarea.input {
     right: -6px;
     width: 96px;
     height: 96px;
+  }
+}
+
+@media (max-width: 760px) {
+  main > * {
+    padding: 28px 28px;
+  }
+  nav,
+  footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  footer {
+    font-size: 14px;
+  }
+  .hero {
+    padding: 48px 16px 56px;
+  }
+  .hero-title {
+    max-width: 14ch;
+    font-size: 36px;
+  }
+  .hero-text {
+    max-width: 30rem;
+    margin: 18px 0 24px;
+    font-size: 18px;
+  }
+  .hero::after {
+    right: -82px;
+    bottom: -38px;
+    width: 240px;
+    height: 240px;
+    opacity: 0.16;
+  }
+  .why,
+  .events {
+    padding: 40px 16px 52px;
+  }
+  .events {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .section-title {
+    margin-bottom: 18px;
+    font-size: 30px;
+  }
+  .page-title {
+    padding-top: 24px;
+    padding-bottom: 16px;
+    font-size: 38px;
+  }
+  .game-card {
+    justify-self: center;
+  }
+  .event-card,
+  .game-card,
+  .review-card,
+  .detail-card,
+  .form-card,
+  .players,
+  .contact-card {
+    padding: 18px;
+    border-radius: 12px;
+  }
+  .event-card:nth-of-type(odd),
+  .event-card:nth-of-type(even),
+  .review-card,
+  .review-card:nth-of-type(even) {
+    transform: none;
+  }
+  .event-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px 16px;
+  }
+  .filter-form {
+    align-items: stretch;
+    gap: 12px;
+    margin: 0 28px 28px;
+  }
+  .filter-form .field,
+  .filter-form .field-search {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .filter-form .field-label {
+    text-align: left;
+  }
+  .filter-form .input
+  {
+    width: 100%;
+    min-width: 0;
+  }
+  .filter-form .btn {
+    width: 30%;
+    margin-inline: auto;
+  }
+  .game-list {
+    margin: 16px 28px 0;
+    padding: 20px 16px 36px;
+    gap: 20px 14px;
+    border-radius: 14px 14px 0 0;
+  }
+  .game-image {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 14px;
+  }
+  .game-image img {
+    height: 170px;
+  }
+  .game-detail .game-image {
+    width: min(100%, 280px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .game-detail .game-image img {
+    height: 220px;
+  }
+  .detail-title {
+    font-size: 32px;
+  }
+  .detail-subtitle {
+    font-size: 22px;
+  }
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px 0 24px;
+  }
+  .fact {
+    padding: 14px 16px;
+  }
+  .fact dd {
+    overflow-wrap: anywhere;
+    font-size: 16px;
+  }
+  .players .section-title {
+    font-size: 24px;
+  }
+  .about-intro {
+    position: relative;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .about-text {
+    position: relative;
+    z-index: 1;
+  }
+  .about-art {
+    position: absolute;
+    top: 120px;
+    right: 100px;
+    z-index: 0;
+    width: 300px;
+    height: 300px;
+    opacity: 0.14;
+    pointer-events: none;
+  }
+  .about-lead {
+    font-size: 18px;
+  }
+  .about-boxes {
+    gap: 32px;
+  }
+  .venue-tile {
+    max-width: 100%;
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+  .auth {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .form-card {
+    gap: 20px;
+  }
+  .auth-art {
+    height: 180px;
+    transform: none;
+    opacity: 0.8;
+  }
+  .event-layout,
+  .game-detail {
+    gap: 24px;
+  }
+  .event-form::after {
+    top: -32px;
+    right: 0;
+    width: 72px;
+    height: 72px;
+  }
+  .review-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 32px;
+  }
+  .page-title {
+    font-size: 32px;
+  }
+  .detail-title {
+    font-size: 28px;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .btn {
+    padding: 12px 20px;
+  }
+  .game-list {
+    max-width: 300px;
+    justify-self: center;
   }
 }
