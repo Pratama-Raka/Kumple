@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buat Event Baru | Kumple</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="flex-row flex-wrap">
         <a href="index.html" class="logo">Kumple</a>
-        <ul class="nav-links">
+
+        <input type="checkbox" id="menu-toggle" class="peer sr-only" />
+        <label for="menu-toggle" class="nav-toggle md:hidden">Menu</label>
+
+        <ul
+          class="nav-links hidden w-full flex-col gap-3 mt-3 peer-checked:flex md:mt-0 md:flex md:w-auto md:flex-row md:gap-6"
+        >
           <li><a href="games.html">Katalog Game</a></li>
           <li><a href="events.html" aria-current="page">Event</a></li>
           <li><a href="about.html">Tentang</a></li>
@@ -24,11 +31,11 @@
       <h1 class="page-title page-title-short">Buat Event Baru</h1>
 
       <div class="form-wrap">
-        <form action="#" method="post" class="form-card event-form">
+        <form action="#" method="post" class="form-card event-form p-6 md:p-10">
           <h3 class="form-heading">Detail Event</h3>
 
-          <div class="form-grid">
-            <div class="field field-double">
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="field md:col-span-2">
               <label for="nama-event" class="field-label">Nama event</label>
               <input
                 type="text"
@@ -47,7 +54,7 @@
                 <option value="board-brew">Board &amp; Brew, Buah Batu</option>
               </select>
             </div>
-            <div class="field field-wide">
+            <div class="field col-span-full">
               <label for="deskripsi" class="field-label">Deskripsi</label>
               <textarea
                 id="deskripsi"

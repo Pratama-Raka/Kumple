@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catan | Detail Game | Kumple</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="flex-row flex-wrap">
         <a href="index.html" class="logo">Kumple</a>
-        <ul class="nav-links">
+
+        <input type="checkbox" id="menu-toggle" class="peer sr-only" />
+        <label for="menu-toggle" class="nav-toggle md:hidden">Menu</label>
+
+        <ul
+          class="nav-links hidden w-full flex-col gap-3 mt-3 peer-checked:flex md:mt-0 md:flex md:w-auto md:flex-row md:gap-6"
+        >
           <li><a href="games.html" aria-current="page">Katalog Game</a></li>
           <li><a href="events.html">Event</a></li>
           <li><a href="about.html">Tentang</a></li>
@@ -22,7 +29,7 @@
 
     <main>
       <div class="detail-wrap">
-        <article class="detail-card game-detail">
+        <article class="detail-card game-detail grid grid-cols-1 items-start gap-12 lg:grid-cols-[320px_minmax(0,1fr)]">
           <figure class="game-image">
             <span
               class="game-tile tile-4"
@@ -78,7 +85,7 @@
 
       <section class="reviews">
         <h2 class="section-title">Ulasan pemain</h2>
-        <div class="review-list">
+        <div class="review-list grid grid-cols-1 gap-7 md:grid-cols-2">
           <article class="review-card">
             <p class="review-text">
               "Game gateway terbaik buat yang baru mulai main boardgame

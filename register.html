@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register Kumple</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="flex-row flex-wrap">
         <a href="index.html" class="logo">Kumple</a>
-        <ul class="nav-links">
+
+        <input type="checkbox" id="menu-toggle" class="peer sr-only" />
+        <label for="menu-toggle" class="nav-toggle md:hidden">Menu</label>
+
+        <ul
+          class="nav-links hidden w-full flex-col gap-3 mt-3 peer-checked:flex md:mt-0 md:flex md:w-auto md:flex-row md:gap-6"
+        >
           <li><a href="games.html">Katalog Game</a></li>
           <li><a href="events.html">Event</a></li>
           <li><a href="about.html">Tentang</a></li>
@@ -21,7 +28,7 @@
     <main>
       <h1 class="page-title page-title-short">Buat Akun Kumple</h1>
 
-      <section class="auth">
+      <section class="auth grid grid-cols-1 items-center gap-x-16 gap-y-8 md:grid-cols-[minmax(0,480px)_1fr]">
         <form action="#" method="post" class="form-card">
           <span class="game-tile tile-9" aria-hidden="true"></span>
           <div class="field">

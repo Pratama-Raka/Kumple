@@ -15,6 +15,7 @@
   --tile-face: #e2e0df;
   --murk-white: #f3f2f2;
   --tile-edge: #928a89;
+  line-height: 1.6;
 }
 
 * {
@@ -25,7 +26,6 @@
 body {
   font-family: Figtree, sans-serif;
   font-size: 17px;
-  line-height: 1.6;
   color: var(--white);
   overflow-x: hidden;
   min-height: 100vh;
@@ -49,6 +49,13 @@ main > * {
 
 a {
   color: inherit;
+}
+
+/* Tailwind CDN mereset bobot heading, jadi dikembalikan di sini */
+main h1,
+main h2,
+main h3 {
+  font-weight: bold;
 }
 
 :focus-visible {
@@ -96,6 +103,21 @@ nav {
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
   border-bottom-color: var(--yellow);
+}
+
+/* Tombol menu di layar kecil */
+.nav-toggle {
+  padding: 6px 14px;
+  border: 2px solid var(--yellow);
+  border-radius: 8px;
+  color: var(--yellow);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#menu-toggle:focus-visible + .nav-toggle {
+  outline: 3px solid var(--yellow);
+  outline-offset: 3px;
 }
 
 footer {
@@ -205,15 +227,6 @@ footer {
   filter: drop-shadow(0 3px 0 rgba(0, 0, 0, 0.3));
 }
 
-.why-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-auto-flow: column;
-  column-gap: 40px;
-  row-gap: 8px;
-}
-
 .why-title {
   font-size: 20px;
   color: var(--yellow);
@@ -261,7 +274,7 @@ footer {
 }
 
 .game-card {
-  min-width: 0; /* stops long content from stretching the grid */
+  min-width: 0;
 }
 
 .event-card:nth-of-type(odd) {
@@ -296,6 +309,7 @@ footer {
 }
 
 .see-all a {
+  text-decoration: underline;
   font-weight: 600;
   color: var(--yellow);
 }
@@ -350,6 +364,7 @@ footer {
   color: var(--black);
   font-family: inherit;
   font-size: 16px;
+  line-height: normal;
   text-align: center;
   box-shadow:
     1px 1px 0 var(--dark-brown),
@@ -402,8 +417,6 @@ footer {
 
 /* Game Catalog Grid */
 .game-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 32px 20px;
   background-color: var(--white);
   max-width: 1200px;
@@ -580,6 +593,7 @@ button.btn {
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
+  line-height: normal;
 }
 
 .form-card {
@@ -653,20 +667,6 @@ button.btn {
 .form-heading {
   font-family: "Young Serif", serif;
   font-size: 26px;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.field-double {
-  grid-column: span 2;
-}
-
-.field-wide {
-  grid-column: 1 / -1;
 }
 
 textarea.input {
@@ -1017,11 +1017,6 @@ textarea.input {
   .events {
     padding: 56px 20px;
   }
-  .why-list {
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    grid-auto-flow: row;
-  }
   .events {
     grid-template-columns: 1fr;
   }
@@ -1037,10 +1032,15 @@ textarea.input {
     justify-content: flex-start;
   }
   .game-list {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     margin: 24px 20px 0;
     padding: 24px 20px 48px;
     gap: 24px 16px;
     border-radius: 16px 16px 0 0;
+  }
+  .event-form::after {
+    top: -44px;
+    right: -6px;
+    width: 96px;
+    height: 96px;
   }
 }
