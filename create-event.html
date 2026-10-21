@@ -31,7 +31,7 @@
       <h1 class="page-title page-title-short">Buat Event Baru</h1>
 
       <div class="form-wrap">
-        <form action="#" method="post" class="form-card event-form p-6 md:p-10">
+        <form action="#" method="post" class="form-card event-form flex flex-col gap-6 p-6 md:p-10 max-[760px]:gap-5">
           <h3 class="form-heading">Detail Event</h3>
 
           <div class="grid gap-6 md:grid-cols-3">
@@ -99,18 +99,18 @@
             </div>
           </div>
 
-          <fieldset class="game-picks">
+          <fieldset class="game-picks flex flex-wrap gap-4 px-5 pt-3 pb-5">
             <legend>Game yang akan dimainkan</legend>
 
-            <label for="game-1" class="game-pick">
+            <label for="game-1" class="game-pick flex items-center gap-2.5">
               <input type="checkbox" id="game-1" name="game" value="catan" />
               <span>Catan</span>
             </label>
-            <label for="game-2" class="game-pick">
+            <label for="game-2" class="game-pick flex items-center gap-2.5">
               <input type="checkbox" id="game-2" name="game" value="ttr" />
               <span>Ticket to Ride</span>
             </label>
-            <label for="game-3" class="game-pick">
+            <label for="game-3" class="game-pick flex items-center gap-2.5">
               <input
                 type="checkbox"
                 id="game-3"
@@ -121,7 +121,7 @@
             </label>
           </fieldset>
 
-          <button type="submit" class="btn btn-red">Buat Event</button>
+          <button type="submit" class="btn btn-red self-start m-0">Buat Event</button>
         </form>
       </div>
     </main>

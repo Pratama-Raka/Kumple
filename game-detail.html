@@ -29,7 +29,7 @@
 
     <main>
       <div class="detail-wrap">
-        <article class="detail-card game-detail grid grid-cols-1 items-start gap-12 lg:grid-cols-[320px_minmax(0,1fr)]">
+        <article class="detail-card game-detail grid grid-cols-1 items-start gap-12 max-[760px]:gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
           <figure class="game-image">
             <span
               class="game-tile tile-4"
@@ -48,7 +48,7 @@
               pemain berpengalaman.
             </p>
 
-            <dl class="facts">
+            <dl class="facts grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5 mt-6 mb-8 max-[760px]:grid-cols-2">
               <div class="fact">
                 <dt>Jumlah pemain</dt>
                 <dd>3-4 pemain</dd>
@@ -71,11 +71,11 @@
               </div>
             </dl>
 
-            <div class="detail-actions">
-              <button type="button" class="btn btn-red">
+            <div class="detail-actions flex flex-wrap items-center gap-4">
+              <button type="button" class="btn btn-red m-0">
                 Tambah ke Koleksi
               </button>
-              <a href="events.html" class="btn btn-outline"
+              <a href="events.html" class="btn btn-outline m-0"
                 >Cari event yang mainkan game ini</a
               >
             </div>
@@ -85,7 +85,7 @@
 
       <section class="reviews">
         <h2 class="section-title">Ulasan pemain</h2>
-        <div class="review-list grid grid-cols-1 gap-7 md:grid-cols-2">
+        <div class="review-list grid grid-cols-1 gap-7 max-[760px]:gap-5 md:grid-cols-2">
           <article class="review-card">
             <p class="review-text">
               "Game gateway terbaik buat yang baru mulai main boardgame

@@ -28,7 +28,7 @@
     </header>
 
     <main>
-      <div class="event-layout grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
+      <div class="event-layout grid grid-cols-1 items-start gap-10 max-[760px]:gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
         <article class="detail-card">
           <span
             class="game-tile tile-2"
@@ -44,7 +44,7 @@
             jelasin aturan main di awal.
           </p>
 
-          <dl class="facts">
+          <dl class="facts grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5 mt-6 mb-8 max-[760px]:grid-cols-2">
             <div class="fact">
               <dt>Lokasi</dt>
               <dd>Kopi Session, Jl. Ir. H. Djuanda No.123, Dago, Bandung</dd>
@@ -71,7 +71,7 @@
           </dl>
 
           <h2 class="detail-subtitle">Game yang akan dimainkan</h2>
-          <ul class="game-chips">
+          <ul class="game-chips list-none flex flex-wrap gap-3.5 mt-4 mb-8 p-0">
             <li><a href="game-detail.html" class="game-chip">Catan</a></li>
             <li>
               <a href="game-detail.html" class="game-chip">Ticket to Ride</a>
@@ -83,7 +83,7 @@
 
         <section class="players">
           <h2 class="section-title">Peserta yang sudah gabung</h2>
-          <ul class="player-list">
+          <ul class="player-list list-none grid gap-4 p-0">
             <li class="player">Rangga P. (Host)</li>
             <li class="player">Sinta W.</li>
             <li class="player">Fajar A.</li>
