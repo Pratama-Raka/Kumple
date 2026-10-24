@@ -245,7 +245,7 @@ function renderEvents(eventList) {
 				: "";
 
 			return `
-				<article class="event-card ${fullClass}">
+				<article class="event-card pt-10 ${fullClass}">
 					${tile}
 					<h2 class="event-title"><a href="event-detail.html?id=${encodeURIComponent(event.id)}" class="event-link">${escapeHtml(event.title)}</a></h2>
 					<p class="event-venue">${escapeHtml(event.venueName)}</p>
