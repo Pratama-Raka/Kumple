@@ -18,9 +18,13 @@
   line-height: 1.6;
 }
 
-* {
+/* Global Reset */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -51,7 +55,6 @@ a {
   color: inherit;
 }
 
-/* Tailwind CDN mereset bobot heading, jadi dikembalikan di sini */
 main h1,
 main h2,
 main h3 {
@@ -88,7 +91,6 @@ nav {
 
 .nav-links {
   list-style: none;
-  padding: 0;
   display: flex;
   gap: 24px;
 }
@@ -105,7 +107,6 @@ nav {
   border-bottom-color: var(--yellow);
 }
 
-/* Tombol menu di layar kecil */
 .nav-toggle {
   padding: 6px 14px;
   border: 2px solid var(--yellow);
@@ -141,7 +142,9 @@ footer {
   border-radius: 60px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.15s;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
 }
 
 .btn:hover {
@@ -255,7 +258,7 @@ footer {
   right: 64px;
   width: 132px;
   height: 132px;
-  background-image: url("../assets/carrom-coins.png");
+  background-image: url("../assets/cards.png");
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(18deg);
@@ -264,7 +267,8 @@ footer {
 
 /* Cards */
 .event-card,
-.game-card {
+.game-card,
+.review-card {
   background-color: var(--murk-white);
   color: var(--black);
   padding: 24px;
@@ -277,11 +281,13 @@ footer {
   max-width: 250px;
 }
 
-.event-card:nth-of-type(odd) {
+.event-card:nth-of-type(odd),
+.review-card:nth-of-type(odd) {
   transform: rotate(-0.8deg);
 }
 
-.event-card:nth-of-type(even) {
+.event-card:nth-of-type(even),
+.review-card:nth-of-type(even) {
   transform: rotate(0.8deg);
 }
 
@@ -304,12 +310,12 @@ footer {
 }
 
 .event-link:hover,
-.game-link:hover {
+.game-link:hover,
+.see-all a {
   text-decoration: underline;
 }
 
 .see-all a {
-  text-decoration: underline;
   font-weight: 600;
   color: var(--yellow);
 }
@@ -323,7 +329,7 @@ footer {
   padding-bottom: 0;
 }
 
-/* Mahjong Filter Form */
+/* Filter Form */
 .filter-form {
   margin: -30px 64px 40px;
 }
@@ -347,7 +353,6 @@ footer {
   letter-spacing: 1px;
 }
 
-/* Tile Inputs & Action Buttons */
 .input,
 .filter-form .btn {
   min-width: 160px;
@@ -360,13 +365,8 @@ footer {
   font-size: 16px;
   line-height: normal;
   text-align: center;
-  box-shadow:
-    1px 1px 0 var(--dark-brown),
-    2px 2px 0 var(--dark-brown),
-    3px 3px 0 var(--dark-brown),
-    4px 4px 0 var(--dark-brown),
-    5px 5px 0 var(--dark-brown),
-    6px 6px 0 var(--dark-brown);
+  /* Dibuat jauh lebih sederhana (efek solid shadow standar) */
+  box-shadow: 4px 4px 0 var(--dark-brown);
   transition:
     transform 0.1s,
     box-shadow 0.1s;
@@ -386,20 +386,12 @@ footer {
 
 .filter-form .btn:hover {
   transform: translateY(-2px);
-  box-shadow:
-    1px 1px 0 var(--dark-brown),
-    2px 2px 0 var(--dark-brown),
-    3px 3px 0 var(--dark-brown),
-    4px 4px 0 var(--dark-brown),
-    5px 5px 0 var(--dark-brown),
-    6px 6px 0 var(--dark-brown),
-    7px 7px 0 var(--dark-brown),
-    8px 8px 0 var(--dark-brown);
+  box-shadow: 6px 6px 0 var(--dark-brown);
 }
 
 .filter-form .btn:active {
-  transform: translate(6px, 6px);
-  box-shadow: none;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--dark-brown);
 }
 
 /* Game Catalog Grid */
@@ -433,7 +425,7 @@ footer {
   padding: 14px;
   border-radius: 18px;
   background-color: var(--tile-face);
-  box-shadow: 8px -8px 0 var(--tile-edge);
+  box-shadow: 6px -6px 0 var(--tile-edge);
 }
 
 .game-tile {
@@ -455,7 +447,7 @@ footer {
   height: 47px;
 }
 
-/* Mahjong Tile Asset Bindings */
+/* Tile Asset Bindings */
 .tile-1 {
   background-image: url("../assets/tiles/tile-1.svg");
 }
@@ -533,7 +525,6 @@ footer {
 
 .venue-list {
   list-style: none;
-  padding: 0;
   display: grid;
   gap: 28px;
 }
@@ -549,14 +540,14 @@ footer {
   color: var(--black);
   font-family: "Young Serif", serif;
   font-size: 16px;
-  box-shadow: 8px -8px 0 var(--tile-edge);
+  box-shadow: 6px -6px 0 var(--tile-edge);
 }
 
 .contact-card {
   padding: 28px;
   border-radius: 14px;
   background-color: var(--dark-brown);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
   font-style: normal;
   line-height: 2;
 }
@@ -567,13 +558,12 @@ footer {
 }
 
 /* Login & Register Pages */
-
 .form-card {
   position: relative;
   border-radius: 24px;
   background-color: var(--tile-face);
   color: var(--black);
-  box-shadow: 10px -10px 0 var(--tile-edge);
+  box-shadow: 8px -8px 0 var(--tile-edge);
 }
 
 .auth-art {
@@ -588,7 +578,6 @@ footer {
 .art-coins {
   background-image: url("../assets/carrom-board.png");
 }
-
 .art-pieces {
   background-image: url("../assets/chess-pieces.svg");
 }
@@ -597,6 +586,7 @@ footer {
   color: var(--yellow);
   font-weight: 600;
 }
+
 /* Create Event Page */
 .event-form {
   max-width: 920px;
@@ -714,13 +704,21 @@ textarea.input {
 }
 
 /* Event Detail Page */
+.detail-wrap,
+.event-layout {
+  padding: 28px;
+}
+
 .detail-card {
   position: relative;
-  padding: 40px;
   border-radius: 14px;
   background-color: var(--murk-white);
   color: var(--black);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.event-layout .detail-card {
+  padding-left: 30px;
 }
 
 .detail-title {
@@ -741,11 +739,11 @@ textarea.input {
 
 .fact,
 .player {
+  padding: 14px 18px;
   border-radius: 14px;
   background-color: var(--tile-face);
-  box-shadow: 5px -5px 0 var(--tile-edge);
+  box-shadow: 4px -4px 0 var(--tile-edge);
 }
-
 
 .fact dt {
   font-size: 14px;
@@ -777,7 +775,7 @@ textarea.input {
   padding: 28px;
   border-radius: 14px;
   background-color: var(--dark-brown);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 .players .section-title {
@@ -789,7 +787,6 @@ textarea.input {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 18px;
   color: var(--black);
   font-weight: 600;
 }
@@ -806,11 +803,9 @@ textarea.input {
 .player:nth-child(4n + 2)::before {
   background-color: var(--yellow);
 }
-
 .player:nth-child(4n + 3)::before {
   background-color: var(--charcoal);
 }
-
 .player:nth-child(4n)::before {
   background-color: var(--tan);
 }
@@ -829,19 +824,6 @@ textarea.input {
 .detail-card .btn-outline {
   border-color: var(--dark-brown);
   color: var(--dark-brown);
-}
-
-.review-card {
-  padding: 24px;
-  border-radius: 14px;
-  background-color: var(--murk-white);
-  color: var(--black);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
-  transform: rotate(-0.8deg);
-}
-
-.review-card:nth-of-type(even) {
-  transform: rotate(0.8deg);
 }
 
 .review-text {
@@ -889,8 +871,8 @@ textarea.input {
     justify-content: center;
   }
   .hero {
-    min-height: 0;
-    padding: 40px 20px 56px;
+    min-height: 420px;
+    padding: 80px 180px 0px 30px;
   }
   .hero-title {
     font-size: 40px;
@@ -902,14 +884,13 @@ textarea.input {
   .hero::after {
     position: absolute;
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 240px;
     top: auto;
     right: -72px;
-    bottom: -32px;
-    margin: 0;
+    top: 50px;
+    opacity: 0.8;
     transform: rotate(-10deg);
-    opacity: 0.22;
     z-index: 0;
   }
   .hero > * {
@@ -919,12 +900,17 @@ textarea.input {
   .why,
   .events {
     padding: 56px 20px;
+    min-height: 420px;
+  }
+  .why > .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .events {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .event-card,
-  .game-card {
+  .game-card,
+  .review-card {
     padding: 20px;
   }
   .events::before {
@@ -953,12 +939,7 @@ textarea.input {
 
 @media (max-width: 760px) {
   main > * {
-    padding: 28px 28px;
-  }
-  nav,
-  footer {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 28px 16px;
   }
   footer {
     font-size: 14px;
@@ -977,10 +958,10 @@ textarea.input {
   }
   .hero::after {
     right: -82px;
-    bottom: -38px;
+    top: 50px;
     width: 240px;
     height: 240px;
-    opacity: 0.16;
+    opacity: 0.7;
   }
   .why,
   .events {
@@ -1011,6 +992,9 @@ textarea.input {
     padding: 18px;
     border-radius: 12px;
   }
+  .event-layout .detail-card {
+    padding-left: 18px;
+  }
   .auth .form-card {
     padding-top: 34px;
   }
@@ -1022,13 +1006,13 @@ textarea.input {
   }
   .event-card:nth-of-type(odd),
   .event-card:nth-of-type(even),
-  .review-card,
+  .review-card:nth-of-type(odd),
   .review-card:nth-of-type(even) {
     transform: none;
   }
   .filter-form {
     align-items: stretch;
-    margin: 0 28px 28px;
+    margin: 0 16px 28px;
   }
   .filter-form .field,
   .filter-form .field-search {
@@ -1038,8 +1022,7 @@ textarea.input {
   .filter-form .field-label {
     text-align: left;
   }
-  .filter-form .input
-  {
+  .filter-form .input {
     width: 100%;
     min-width: 0;
   }
@@ -1048,7 +1031,7 @@ textarea.input {
     margin-inline: auto;
   }
   .game-list {
-    margin: 16px 28px 0;
+    margin: 16px 16px 0;
     padding: 20px 16px 36px;
     gap: 20px 14px;
     border-radius: 14px 14px 0 0;
@@ -1124,9 +1107,7 @@ textarea.input {
 }
 
 @media (max-width: 420px) {
-  .hero-title {
-    font-size: 32px;
-  }
+  .hero-title,
   .page-title {
     font-size: 32px;
   }

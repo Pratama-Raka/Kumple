@@ -305,7 +305,6 @@ function setUpGameFilters() {
 		event.preventDefault();
 		refreshGames();
 	});
-	$("#search, #players, #category").on("input change", refreshGames);
 }
 
 function setUpEventFilters() {
