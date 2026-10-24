@@ -402,13 +402,6 @@ footer {
   box-shadow: none;
 }
 
-.tile-note {
-  padding-top: 40px;
-  padding-bottom: 0;
-  font-size: 15px;
-  opacity: 0.85;
-}
-
 /* Game Catalog Grid */
 .game-list {
   gap: 32px 20px;
@@ -690,6 +683,33 @@ textarea.input {
 }
 
 .event-slots {
+  font-size: 15px;
+}
+
+.interaction-message {
+  display: none;
+  margin: 0 0 20px;
+  padding: 12px 16px;
+  border-left: 5px solid var(--yellow);
+  background-color: var(--dark-brown);
+  color: var(--white);
+}
+
+.form-card .interaction-message {
+  background-color: var(--green);
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 24px;
+  border: 2px dashed var(--yellow);
+  color: var(--white);
+  text-align: center;
+}
+
+.event-game-list {
+  margin-top: 8px;
+  color: var(--green);
   font-size: 15px;
 }
 

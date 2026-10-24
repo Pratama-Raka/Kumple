@@ -33,7 +33,7 @@
         <a href="create-event.html" class="btn btn-yellow mb-1">Buat Event Baru</a>
       </div>
 
-      <form action="#" method="get" class="filter-form flex flex-wrap items-end justify-center gap-4 px-0 py-0 max-[1000px]:justify-start max-[760px]:items-stretch max-[760px]:gap-3">
+      <form id="event-filter" action="#" method="get" class="filter-form flex flex-wrap items-end justify-center gap-4 px-0 py-0 max-[1000px]:justify-start max-[760px]:items-stretch max-[760px]:gap-3">
         <div class="field">
           <label for="venue" class="field-label">Venue</label>
           <select id="venue" name="venue" class="input">
@@ -50,69 +50,15 @@
 
         <button type="submit" class="btn btn-red">Terapkan Filter</button>
       </form>
-      <section class="event-list grid grid-cols-1 gap-x-7 gap-y-10 pb-16 md:grid-cols-2 xl:grid-cols-3">
-        <article class="event-card">
-          <span
-            class="game-tile tile-2"
-            title="2 slot tersisa"
-            aria-hidden="true"
-          ></span>
-          <h2 class="event-title">
-            <a href="event-detail.html" class="event-link"
-              >Malam Strategi: Catan &amp; Ticket to Ride</a
-            >
-          </h2>
-          <p class="event-venue">Kopi Session, Dago</p>
-          <p class="event-time">
-            <time datetime="2026-10-04T19:00"
-              >Sabtu, 4 Oktober 2026, 19.00</time
-            >
-          </p>
-          <p class="event-slots">6 dari 8 slot terisi</p>
-          <span class="slot-bar" style="--filled: 75%"></span>
-        </article>
-
-        <article class="event-card">
-          <span
-            class="game-tile tile-6"
-            title="6 slot tersisa"
-            aria-hidden="true"
-          ></span>
-          <h2 class="event-title">
-            <a href="event-detail.html" class="event-link"
-              >Party Game Santai untuk Pemula</a
-            >
-          </h2>
-          <p class="event-venue">Board - Brew, Buah Batu</p>
-          <p class="event-time">
-            <time datetime="2026-10-11T18:30"
-              >Sabtu, 11 Oktober 2026, 18.30</time
-            >
-          </p>
-          <p class="event-slots">4 dari 10 slot terisi</p>
-          <span class="slot-bar" style="--filled: 40%"></span>
-        </article>
-
-        <article class="event-card event-full">
-          <h2 class="event-title">
-            <a href="event-detail.html" class="event-link"
-              >Marathon Codenames</a
-            >
-          </h2>
-          <p class="event-venue">Kopi Session, Dago</p>
-          <p class="event-time">
-            <time datetime="2026-10-18T16:00"
-              >Sabtu, 18 Oktober 2026, 16.00</time
-            >
-          </p>
-          <p class="event-slots">Penuh &dash; 12 dari 12 slot</p>
-          <span class="slot-bar" style="--filled: 100%"></span>
-        </article>
+      <p id="event-filter-message" class="interaction-message" role="status" aria-live="polite"></p>
+      <section class="event-list grid grid-cols-1 gap-x-7 gap-y-10 pb-16 md:grid-cols-2 xl:grid-cols-3" aria-live="polite">
       </section>
     </main>
 
     <footer>
       <p>&copy; 2026 Kumple. Dibuat untuk komunitas boardgame Bandung.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

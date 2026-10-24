@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catan | Detail Game | Kumple</title>
+    <title>Detail Game | Kumple</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -29,82 +29,60 @@
 
     <main>
       <div class="detail-wrap">
-        <article class="detail-card game-detail grid grid-cols-1 items-start gap-12 max-[760px]:gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
+        <article id="game-detail-card" class="detail-card game-detail grid grid-cols-1 items-start gap-12 max-[760px]:gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
           <figure class="game-image">
-            <span
-              class="game-tile tile-4"
-              title="Maksimal 4 pemain"
-              aria-hidden="true"
-            ></span>
-            <img src="assets/catan-box.jpg" alt="Kotak game Catan" />
-            <figcaption class="cover-caption">Catan - edisi dasar</figcaption>
+            <span id="game-detail-tile" class="game-tile tile-4" title="Maksimal 4 pemain" aria-hidden="true"></span>
+            <img id="game-detail-image" src="assets/catan-box.jpg" alt="Kotak game Catan" />
+            <figcaption id="game-detail-caption" class="cover-caption">Catan - edisi dasar</figcaption>
           </figure>
 
           <div class="detail-info">
-            <h1 class="detail-title">Catan</h1>
-            <p class="detail-text">
-              Bangun pemukiman, kumpulkan sumber daya, dan jadi penguasa pulau
-              Catan. Salah satu game strategi paling populer untuk pemula maupun
-              pemain berpengalaman.
-            </p>
+            <h1 id="game-detail-title" class="detail-title">Catan</h1>
+            <p id="game-detail-description" class="detail-text"></p>
 
             <dl class="facts grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5 mt-6 mb-8 max-[760px]:grid-cols-2">
               <div class="fact">
                 <dt>Jumlah pemain</dt>
-                <dd>3-4 pemain</dd>
+                <dd id="game-detail-players"></dd>
               </div>
               <div class="fact">
                 <dt>Durasi main</dt>
-                <dd>60-90 menit</dd>
+                <dd id="game-detail-duration"></dd>
               </div>
               <div class="fact">
                 <dt>Kategori</dt>
-                <dd>Strategy</dd>
+                <dd id="game-detail-category"></dd>
               </div>
               <div class="fact">
                 <dt>Tingkat kesulitan</dt>
-                <dd>Menengah</dd>
+                <dd id="game-detail-difficulty"></dd>
               </div>
               <div class="fact">
                 <dt>Rating komunitas</dt>
-                <dd>4.3 / 5</dd>
+                <dd id="game-detail-rating"></dd>
               </div>
             </dl>
 
             <div class="detail-actions flex flex-wrap items-center gap-4">
-              <button type="button" class="btn btn-red m-0">
-                Tambah ke Koleksi
-              </button>
               <a href="events.html" class="btn btn-outline m-0"
                 >Cari event yang mainkan game ini</a
               >
             </div>
           </div>
         </article>
+        <p id="game-detail-not-found" class="empty-state" hidden>Game tidak ditemukan. Kembali ke <a href="games.html">katalog game</a>.</p>
       </div>
 
       <section class="reviews">
         <h2 class="section-title">Ulasan pemain</h2>
-        <div class="review-list grid grid-cols-1 gap-7 max-[760px]:gap-5 md:grid-cols-2">
-          <article class="review-card">
-            <p class="review-text">
-              "Game gateway terbaik buat yang baru mulai main boardgame
-              strategi."
-            </p>
-            <p class="review-author">- Rangga, Bandung</p>
-          </article>
-          <article class="review-card">
-            <p class="review-text">
-              "Selalu jadi pilihan pertama kalau lagi kumpul rame-rame."
-            </p>
-            <p class="review-author">- Sinta, Bandung</p>
-          </article>
-        </div>
+        <div id="game-review-list" class="review-list grid grid-cols-1 gap-7 max-[760px]:gap-5 md:grid-cols-2"></div>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2026 Kumple. Dibuat untuk komunitas boardgame Bandung.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

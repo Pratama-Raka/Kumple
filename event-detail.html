@@ -35,10 +35,10 @@
             title="2 slot tersisa"
             aria-hidden="true"
           ></span>
-          <h1 class="detail-title">
+          <h1 id="event-detail-title" class="detail-title">
             Malam Strategi: Catan &amp; Ticket to Ride
           </h1>
-          <p class="detail-text">
+          <p id="event-detail-description" class="detail-text">
             Yuk kumpul santai main dua game strategi klasik. Cocok buat yang
             udah pernah main maupun yang baru mau coba, bakal ada yang bantu
             jelasin aturan main di awal.
@@ -47,12 +47,12 @@
           <dl class="facts grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5 mt-6 mb-8 max-[760px]:grid-cols-2">
             <div class="fact">
               <dt>Lokasi</dt>
-              <dd>Kopi Session, Jl. Ir. H. Djuanda No.123, Dago, Bandung</dd>
+              <dd id="event-detail-venue">Kopi Session, Jl. Ir. H. Djuanda No.123, Dago, Bandung</dd>
             </div>
             <div class="fact">
               <dt>Waktu</dt>
               <dd>
-                <time datetime="2026-10-04T19:00"
+                <time id="event-detail-time" datetime="2026-10-04T19:00"
                   >Sabtu, 4 Oktober 2026, 19.00</time
                 >
               </dd>
@@ -60,7 +60,7 @@
             <div class="fact">
               <dt>Slot tersedia</dt>
               <dd>
-                2 dari 8 slot tersisa
+                <span id="event-detail-slots">2 dari 8 slot tersisa</span>
                 <span class="slot-bar" style="--filled: 75%"></span>
               </dd>
             </div>
@@ -71,19 +71,20 @@
           </dl>
 
           <h2 class="detail-subtitle">Game yang akan dimainkan</h2>
-          <ul class="game-chips list-none flex flex-wrap gap-3.5 mt-4 mb-8 p-0">
+          <ul id="event-detail-games" class="game-chips list-none flex flex-wrap gap-3.5 mt-4 mb-8 p-0">
             <li><a href="game-detail.html" class="game-chip">Catan</a></li>
             <li>
               <a href="game-detail.html" class="game-chip">Ticket to Ride</a>
             </li>
           </ul>
 
-          <button type="button" class="btn btn-red">Gabung Event Ini</button>
+          <p id="join-event-message" class="interaction-message" role="status" aria-live="polite"></p>
+          <button type="button" class="btn btn-red join-event-button">Gabung Event Ini</button>
         </article>
 
         <section class="players">
           <h2 class="section-title">Peserta yang sudah gabung</h2>
-          <ul class="player-list list-none grid gap-4 p-0">
+          <ul id="event-detail-players" class="player-list list-none grid gap-4 p-0">
             <li class="player">Rangga P. (Host)</li>
             <li class="player">Sinta W.</li>
             <li class="player">Fajar A.</li>
@@ -96,5 +97,7 @@
     <footer>
       <p>&copy; 2026 Kumple. Dibuat untuk komunitas boardgame Bandung.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

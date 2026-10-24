@@ -31,7 +31,7 @@
       <h1 class="page-title page-title-short">Buat Event Baru</h1>
 
       <div class="form-wrap">
-        <form action="#" method="post" class="form-card event-form flex flex-col gap-6 p-6 md:p-10 max-[760px]:gap-5">
+        <form id="create-event-form" action="#" method="post" class="form-card event-form flex flex-col gap-6 p-6 md:p-10 max-[760px]:gap-5" novalidate>
           <h3 class="form-heading">Detail Event</h3>
 
           <div class="grid gap-6 md:grid-cols-3">
@@ -121,6 +121,7 @@
             </label>
           </fieldset>
 
+          <p id="create-event-message" class="interaction-message" role="status" aria-live="polite"></p>
           <button type="submit" class="btn btn-red self-start m-0">Buat Event</button>
         </form>
       </div>
@@ -129,5 +130,7 @@
     <footer>
       <p>&copy; 2026 Kumple. Dibuat untuk komunitas boardgame Bandung.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -30,7 +30,7 @@
     <main>
       <h1 class="page-title">Katalog Game</h1>
 
-      <form action="#" method="get" class="filter-form flex flex-wrap items-end justify-center gap-4 px-0 py-0 max-[1000px]:justify-start max-[760px]:items-stretch max-[760px]:gap-3">
+      <form id="game-filter" action="#" method="get" class="filter-form flex flex-wrap items-end justify-center gap-4 px-0 py-0 max-[1000px]:justify-start max-[760px]:items-stretch max-[760px]:gap-3">
         <div class="field field-search">
           <label for="search" class="field-label">Cari game</label>
           <input
@@ -64,110 +64,19 @@
 
         <button type="submit" class="btn btn-red">Terapkan Filter</button>
       </form>
+      <p id="game-filter-message" class="interaction-message" role="status" aria-live="polite"></p>
 
       <section
         class="game-list grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+        aria-live="polite"
       >
-        <article class="game-card strategy">
-          <figure class="game-image">
-            <span
-              class="game-tile tile-4"
-              title="Maksimal 4 pemain"
-              aria-hidden="true"
-            ></span>
-            <img src="assets/catan-box.jpg" alt="Kotak game Catan" />
-          </figure>
-          <h2 class="game-title">
-            <a href="game-detail.html" class="game-link">Catan</a>
-          </h2>
-          <p class="game-info">
-            3-4 pemain | 60-90 menit |
-            <span class="game-tag">Strategy</span>
-          </p>
-        </article>
-
-        <article class="game-card strategy">
-          <figure class="game-image">
-            <span
-              class="game-tile tile-5"
-              title="Maksimal 5 pemain"
-              aria-hidden="true"
-            ></span>
-            <img
-              src="assets/ticket-to-ride-box.jpg"
-              alt="Kotak game Ticket to Ride"
-            />
-          </figure>
-          <h2 class="game-title">
-            <a href="game-detail.html" class="game-link">Ticket to Ride</a>
-          </h2>
-          <p class="game-info">
-            2-5 pemain | 45-60 menit |
-            <span class="game-tag">Strategy</span>
-          </p>
-        </article>
-
-        <article class="game-card party">
-          <figure class="game-image">
-            <span
-              class="game-tile tile-8"
-              title="Maksimal 8 pemain"
-              aria-hidden="true"
-            ></span>
-            <img src="assets/codenames-box.jpg" alt="Kotak game Codenames" />
-          </figure>
-          <h2 class="game-title">
-            <a href="game-detail.html" class="game-link">Codenames</a>
-          </h2>
-          <p class="game-info">
-            4-8 pemain | 15-30 menit |
-            <span class="game-tag">Party</span>
-          </p>
-        </article>
-
-        <article class="game-card family">
-          <figure class="game-image">
-            <span
-              class="game-tile tile-5"
-              title="Maksimal 5 pemain"
-              aria-hidden="true"
-            ></span>
-            <img src="assets/sushi-go-box.png" alt="Kotak game Sushi Go" />
-          </figure>
-          <h2 class="game-title">
-            <a href="game-detail.html" class="game-link">Sushi Go!</a>
-          </h2>
-          <p class="game-info">
-            2-5 pemain | 15 menit |
-            <span class="game-tag">Family</span>
-          </p>
-        </article>
-
-        <article class="game-card family">
-          <figure class="game-image">
-            <span
-              class="game-tile tile-5"
-              title="Maksimal 5 pemain"
-              aria-hidden="true"
-            ></span>
-            <img
-              src="assets/monopoly-deal-box.jpg"
-              alt="Kotak game Monopoly Deal"
-            />
-          </figure>
-          <h2 class="game-title">
-            <a href="game-detail.html" class="game-link">Monopoly Deal</a>
-          </h2>
-          <p class="game-info">
-            2-5 pemain | 15-30 menit |
-            <span class="game-tag">Family</span>
-          </p>
-        </article>
       </section>
     </main>
 
     <footer>
       <p>&copy; 2026 Kumple. Dibuat untuk komunitas boardgame Bandung.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
